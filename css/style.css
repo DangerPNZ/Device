@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Gilroy Extra Bold";
+  src: url("../fonts/gilroyextrabold.woff") format ("woff"),
+       url("../fonts/gilroyextrabold.woff2") format ("woff2");
+       font-weight: normal;
+       font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("../fonts/gilroylight.woff") format ("woff"),
+       url("../fonts/gilroylight.woff2") format ("woff2");
+       font-weight: normal;
+       font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 1160px;
+  font-family: "Gilroy Extra Bold";
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+nav {
+  display: none;
+}
+.logo {
+  display: flex;
+  width: 100%;
+}
+.shop_navigation {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+}
+.buyer_menu {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  padding-left: 20px;
+}
+.personal_mode {
+  display: flex;
+  justify-content: space-between;
+}
+.about_us {
+  display: flex;
+  justify-content: space-between;
+}

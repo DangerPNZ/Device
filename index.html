@@ -10,21 +10,23 @@
 
 <body>
     <header>
+        <div class="logo">
+            <a href="#">Device</a>
+        </div>
         <div class="shop_navigation">
-            <div class="logo">
-                <h2>
-                      <a href="#">Device</a>
-                </h2>
-            </div>
             <form action="#" method="get">
                 <input type="search" name="search" class="search" placeholder="Поиск по сайту">
                 <a href="#" class="bth_search">Искать<span class="icon_"></span></a>
             </form>
-            <a href="#" class="header_nav"></a>
+            <div class="catalog_menu">
+                <a href="#" class="catalog_link">Каталог товаров</a>
+            </div>
         </div>
         <div class="buyer_menu">
             <div class="personal_mode">
-                <a href="#" class="entry">Войти<span class="icon_"></span></a>
+                <div class="login_logout">
+                    <a href="#" class="login">Войти<span class="icon_"></span></a>
+                </div>
                 <div class="selected_product_mode">
                     <a href="#">Сравнить<span class="icon_"></span></a>
                     <a href="#">Корзина<span class="icon_"></span></a>
@@ -38,33 +40,33 @@
                 <a href="#">Контакты</a>
             </div>
         </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                    <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                    <a href="#">Экшн-камеры</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Фитнесс-браслеты</a>
+                </li>
+                <li>
+                    <a href="#">Умные часы</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Квадрокоптеры</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Виртуальная реальность</a>
-            </li>
-            <li>
-                <a href="#">Моноподы для селфи</a>
-            </li>
-            <li>
-                <a href="#">Экшн-камеры</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#">Фитнесс-браслеты</a>
-            </li>
-            <li>
-                <a href="#">Умные часы</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#">Квадрокоптеры</a>
-            </li>
-        </ul>
-    </nav>
     <section class="promo_slider">
         <input type="radio" name="promo_selector" id="pr_1" checked>
         <input type="radio" name="promo_selector" id="pr_2">
@@ -121,24 +123,24 @@
         </div>
     </section>
     <section class="nav_bar">
-      <div class="nav_item">
-        <h2>Виртуальная реальность</h2>
-      </div>
-      <div class="nav_item">
-        <h2>Моноподы для селфи</h2>
-      </div>
-      <div class="nav_item">
-        <h2>Экшн-камеры</h2>
-      </div>
-      <div class="nav_item">
-        <h2>Фитнесс браслеты</h2>
-      </div>
-      <div class="nav_item">
-        <h2>Умные часы</h2>
-      </div>
-      <div class="nav_item">
-        <h2>Квадрокоптеры</h2>
-      </div>
+        <a href="#" class="nav_item">
+            <h2>Виртуальная реальность</h2>
+        </a>
+        <a href="#" class="nav_item">
+            <h2>Моноподы для селфи</h2>
+        </a>
+        <a href="#" class="nav_item">
+            <h2>Экшн-камеры</h2>
+        </a>
+        <a href="#" class="nav_item">
+            <h2>Фитнесс браслеты</h2>
+        </a>
+        <a href="#" class="nav_item">
+            <h2>Умные часы</h2>
+        </a>
+        <a href="#" class="nav_item">
+            <h2>Квадрокоптеры</h2>
+        </a>
     </section>
     <section class="advantages_slider">
         <input type="radio" name="adv_radio" id="advantages_delivery" checked>
@@ -158,8 +160,7 @@
         <div class="adv_slider">
             <div class="adv_slide">
                 <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
             <div class="adv_slide">
                 <h3>Гарантия</h3>
@@ -173,10 +174,10 @@
         </div>
     </section>
     <section class="manufacturers">
-      <a href="#" title="DJI"></a>
-      <a href="#" title="SP Gadgets"></a>
-      <a href="#" title="GoPro"></a>
-      <a href="#" title="Vive"></a>
+        <a href="#" title="DJI"></a>
+        <a href="#" title="SP Gadgets"></a>
+        <a href="#" title="GoPro"></a>
+        <a href="#" title="Vive"></a>
     </section>
     <section class="info">
         <div class="description">
@@ -197,35 +198,33 @@
             <a href="feedback.html" class="feedback_mail">Напишите нам</a>
         </div>
         <footer>
-          <div class="footer_personal_mode">
-            <div class="f_logo">
-              <h2>
-                <a href="#">Device</a>
-              </h2>
+            <div class="footer_personal_mode">
+                <div class="f_logo">
+                    <a href="#">Device</a>
+                </div>
+                <div class="f_personal_link">
+                    <a href="#">Войти</a>
+                    <a href="#">Сравнить</a>
+                    <a href="#">Корзина</a>
+                </div>
             </div>
-            <div class="f_personal_link">
-              <a href="#">Войти</a>
-              <a href="#">Сравнить</a>
-              <a href="#">Корзина</a>
+            <div class="footer_info">
+                <span>г. Москваб ул. Строителей, 15</span>
+                <div class="f_about_shop">
+                    <a href="#">Доставка</a>
+                    <a href="#">Гарантия</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <span>Тел.: +7 (495) 495-95-95</span>
             </div>
-          </div>
-          <div class="footer_info">
-            <span>г. Москваб ул. Строителей, 15</span>
-            <div class="f_about_shop">
-              <a href="#">Доставка</a>
-              <a href="#">Гарантия</a>
-              <a href="#">Контакты</a>
+            <div class="external_links">
+                <div class="social">
+                    <a href="#" class=""><span>Facebook</span></a>
+                    <a href="#" class=""><span>Instagram</span></a>
+                    <a href="#" class=""><span>Tweeter</span></a>
+                </div>
+                <a href="#" class=""></a>
             </div>
-            <span>Тел.: +7 (495) 495-95-95</span>
-          </div>
-          <div class="external_links">
-            <div class="social">
-              <a href="#" class=""><span>Facebook</span></a>
-              <a href="#" class=""><span>Instagram</span></a>
-              <a href="#" class=""><span>Tweeter</span></a>
-            </div>
-            <a href="#" class=""></a>
-          </div>
         </footer>
 
 </body>
