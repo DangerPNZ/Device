@@ -11,15 +11,15 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#">Device</a>
+            <a>Device</a>
         </div>
         <div class="shop_navigation">
             <form action="#" method="get">
                 <input type="search" name="search" class="search" placeholder="Поиск по сайту">
-                <a href="#" class="bth_search">Искать<span class="icon_"></span></a>
+                <a href="#" class="bth_search">Искать</a>
             </form>
-            <div class="catalog_menu">
-                <a href="#" class="catalog_link">Каталог товаров</a>
+            <div class="catalog_open">
+                <a href="catalog.html" class="catalog_link">Каталог товаров</a>
             </div>
         </div>
         <div class="buyer_menu">
@@ -40,8 +40,8 @@
                 <a href="#">Контакты</a>
             </div>
         </div>
-        <nav>
-            <ul>
+        <nav class="catalog_menu">
+            <ul class="catalog_list">
                 <li>
                     <a href="#">Виртуальная реальность</a>
                 </li>
@@ -52,7 +52,7 @@
                     <a href="#">Экшн-камеры</a>
                 </li>
             </ul>
-            <ul>
+            <ul class="catalog_list">
                 <li>
                     <a href="#">Фитнесс-браслеты</a>
                 </li>
@@ -60,7 +60,7 @@
                     <a href="#">Умные часы</a>
                 </li>
             </ul>
-            <ul>
+            <ul class="catalog_list">
                 <li>
                     <a href="#">Квадрокоптеры</a>
                 </li>
@@ -146,17 +146,19 @@
         <input type="radio" name="adv_radio" id="advantages_delivery" checked>
         <input type="radio" name="adv_radio" id="advantages_guarantee">
         <input type="radio" name="adv_radio" id="advantages_credit">
-        <ul class="advantages_list">
-            <li>
-                <label for="advantages_delivery"><a>Доставка</a></label>
-            </li>
-            <li>
-                <label for="advantages_guarantee"><a>Гарантия</a></label>
-            </li>
-            <li>
-                <label for="advantages_credit"><a>Кредит</a></label>
-            </li>
-        </ul>
+        <div class="adv_toogle_menu">
+            <ul class="advantages_list">
+                <li>
+                    <label for="advantages_delivery"><a>Доставка</a></label>
+                </li>
+                <li>
+                    <label for="advantages_guarantee"><a>Гарантия</a></label>
+                </li>
+                <li>
+                    <label for="advantages_credit"><a>Кредит</a></label>
+                </li>
+            </ul>
+        </div>
         <div class="adv_slider">
             <div class="adv_slide">
                 <h3>Доставка</h3>
@@ -197,10 +199,11 @@
             <a href="map.html" class="map"><img src="./img/map.jpg" alt="Карта" width="" height="" title="Развернуть карту"></a>
             <a href="feedback.html" class="feedback_mail">Напишите нам</a>
         </div>
+    </section>
         <footer>
             <div class="footer_personal_mode">
                 <div class="f_logo">
-                    <a href="#">Device</a>
+                    <a>Device</a>
                 </div>
                 <div class="f_personal_link">
                     <a href="#">Войти</a>
@@ -209,7 +212,7 @@
                 </div>
             </div>
             <div class="footer_info">
-                <span>г. Москваб ул. Строителей, 15</span>
+                <span>г. Москва, ул. Строителей, 15</span>
                 <div class="f_about_shop">
                     <a href="#">Доставка</a>
                     <a href="#">Гарантия</a>
@@ -223,7 +226,7 @@
                     <a href="#" class=""><span>Instagram</span></a>
                     <a href="#" class=""><span>Tweeter</span></a>
                 </div>
-                <a href="#" class=""></a>
+                <a href="#" class=""><span>Сайт Академии</span></a>
             </div>
         </footer>
 

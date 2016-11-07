@@ -1,57 +1,398 @@
 @font-face {
-  font-family: "Gilroy Extra Bold";
-  src: url("../fonts/gilroyextrabold.woff") format ("woff"),
-       url("../fonts/gilroyextrabold.woff2") format ("woff2");
-       font-weight: normal;
-       font-style: normal;
+    font-family: "Gilroy ExtraBold";
+    src: url("../fonts/gilroyextrabold.woff") format("woff"), url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Gilroy Light";
-  src: url("../fonts/gilroylight.woff") format ("woff"),
-       url("../fonts/gilroylight.woff2") format ("woff2");
-       font-weight: normal;
-       font-style: normal;
+    font-family: "Gilroy Light";
+    src: url("../fonts/gilroylight.woff") format("woff"), url("../fonts/gilroylight.woff2") format("woff2");
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+}
+@font-face {
+    font-family: "OpenSans Light";
+    src: url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2");
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  min-width: 1160px;
-  font-family: "Gilroy Extra Bold";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "OpenSans Light", "Arial", sans-serif;
 }
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    color: #000;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+/* хеддер */
 header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1160px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+nav {
+    display: none;
+    flex-wrap: wrap;
+}
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.logo a {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.shop_navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 520px;
+}
+.search {
+  font-family: "OpenSans Light", "Arial", sans-serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+.catalog_link {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.buyer_menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 520px;
+    padding-left: 20px;
+}
+.personal_mode {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.personal_mode a {
+  font-family: "OpenSans Light", "Arial", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+.login_logout {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+.selected_product_mode {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 220px;
+}
+.about_us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about_us a {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.adv_links a {
+  margin-right: 38px;
+}
+/* слайдер */
+.promo_slider {
   display: flex;
   flex-wrap: wrap;
   width: 1160px;
-  padding: 0 60px;
+  padding: 50px 60px 0 600px;
   margin: 0 auto;
 }
-nav {
+.promo_slider input[name="promo_selector"] {
+  display: flex;
+}
+.toogle_descript {
+  font-size: 0;
+}
+.pr_slide {
+  display: none;
+  flex-direction: column;
+}
+.promo_features {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pr_feature {
+  display: flex;
+  flex-direction: column;
+}
+#pr_1:checked ~ .pr_slide1,
+#pr_2:checked ~ .pr_slide2,
+#pr_3:checked ~ .pr_slide3 {
+  display: flex;
+}
+/* навигационная панель */
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+}
+.nav_item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 160px;
+}
+.nav_item::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+}
+.nav_item h2 {
+  font-size: 18px;
+}
+/* Слайдер Особенности */
+.advantages_slider {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+input[name="adv_radio"] {
   display: none;
 }
-.logo {
+.adv_toogle_menu {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+  width: 400px;
 }
-.shop_navigation {
-  display: flex;
-  flex-direction: column;
-  width: 520px;
-}
-.buyer_menu {
+.adv_slider {
   display: flex;
   flex-direction: column;
-  width: 520px;
-  padding-left: 20px;
+  flex-wrap: wrap;
+  width: 760px;
 }
-.personal_mode {
+.adv_slide {
+  display: none;
+  flex-direction: column;
+}
+#advantages_delivery:checked ~ .adv_slider .adv_slide:nth-child(1),
+#advantages_guarantee:checked ~ .adv_slider .adv_slide:nth-child(2),
+#advantages_credit:checked ~ .adv_slider .adv_slide:nth-child(3) {
+  display: flex;
+}
+/* Производители */
+.manufacturers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+}
+.manufacturers a {
+  display: flex;
+  width: 260px;
+  height: 100px;
+  background-color: #a9fa6e;
+}
+/* Информация */
+.info {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding-right: 145px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+.footer_personal_mode {
   display: flex;
   justify-content: space-between;
 }
-.about_us {
+.footer_info {
   display: flex;
   justify-content: space-between;
+}
+.f_about_shop {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.external_links {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 380px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+/* catalog.html */
+/* пагинатор */
+.paginator {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+.paginator h1 {
+  font-size: 47px;
+  letter-spacing: 0.01em;
+}
+.paginator a {
+  font-family: "OpenSans Light", "Arial", sans-serif;
+  font-size: 14px;
+  color: #c9c9c9;
+  vertical-align: baseline;
+}
+.paginator_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.paginator_page {
+  display: flex;
+  flex-wrap: wrap;
+}
+.paginator_page li {
+  margin-left: 40px;
+}
+/* main */
+main {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+/* боковая панель */
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  padding: 0 68px 0 60px;
+}
+.price_controls {
+  display: flex;
+}
+/* разобраться, inputы это или нет! */
+.price_controls input {
+  display: none;
+  width: auto;
+}
+.color_selection {
+  display: flex;
+  flex-direction: column;
+}
+.color_selection input[type="checkbox"] {
+  display: none;
+}
+.color_selection label {
+  padding-left: 40px;
+}
+.bluetooth_mode {
+  display: flex;
+  flex-direction: column;
+}
+.bluetooth_mode input[type="radio"] {
+  display: none;
+}
+.bluetooth_mode label {
+  padding-left: 40px;
+}
+/* Результаты поиска */
+.results {
+  display: flex;
+  flex-direction: column;
+  width: 832px;
+  padding-left: 72px;
+}
+.sort_header {
+  display: flex;
+  justify-content: space-between;
+  width: 760px;
+}
+.sort_mode {
+  display: flex;
+}
+.criteria {
+  display: flex;
+  align-items: center;
+}
+.sort_direction {
+  display: flex;
+}
+.sort_direct_arrows {
+  display: flex;
+}
+/* карточки товаров */
+.found_product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+.product_descript {
+  display: flex;
+  justify-content: space-between;
+}
+.product_descript h2 {
+  font-size: 18px;
+  width: 260px;
+}
+/* Страницы результатов */
+.pages {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.page_list {
+  display: flex;
+  max-width: 440px;
 }
