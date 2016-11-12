@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="index_header">
         <div class="logo">
             <a>Device</a>
         </div>
@@ -77,6 +77,7 @@
             <label for="pr_3"><span class="toogle_descript">Третий слайд</span></label>
         </div>
         <div class="pr_slide pr_slide1">
+            <span class="slide_number">01</span>
             <h4>Делай селфи, как Бен Стиллер!</h4>
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a href="#">Подробнее</a>
@@ -96,6 +97,7 @@
             </div>
         </div>
         <div class="pr_slide pr_slide2">
+          <span class="slide_number">02</span>
             <h4>Худеем правильно!</h4>
             <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
             <a href="#">Подробнее</a>
@@ -107,8 +109,9 @@
             </div>
         </div>
         <div class="pr_slide pr_slide3">
+          <span class="slide_number">03</span>
             <h4>Порхает как бабочка, жалит как пчела!</h4>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <a href="#">Подробнее</a>
             <div class="promo_features">
                 <div class="pr_feature">
@@ -143,6 +146,7 @@
         </a>
     </section>
     <section class="advantages_slider">
+      <div class="advantages_slider_container">
         <input type="radio" name="adv_radio" id="advantages_delivery" checked>
         <input type="radio" name="adv_radio" id="advantages_guarantee">
         <input type="radio" name="adv_radio" id="advantages_credit">
@@ -174,6 +178,7 @@
                 <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
         </div>
+      </div>
     </section>
     <section class="manufacturers">
         <a href="#" title="DJI"></a>
@@ -191,16 +196,17 @@
                 <li>Автотрейдинг</li>
                 <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a href="#">Подробнее о нас</a>
+            <a href="#" class="info_btn">Подробнее о нас</a>
         </div>
         <div class="contacts">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <a href="map.html" class="map"><img src="./img/map.jpg" alt="Карта" width="" height="" title="Развернуть карту"></a>
-            <a href="feedback.html" class="feedback_mail">Напишите нам</a>
+            <a href="map.html" class="map"><img src="./img/map.jpg" alt="Карта" width="560" height="222" title="Развернуть карту"></a>
+            <a href="feedback.html" class="info_btn feedback_mail">Напишите нам</a>
         </div>
     </section>
         <footer>
+          <div class="footer_container">
             <div class="footer_personal_mode">
                 <div class="f_logo">
                     <a>Device</a>
@@ -212,13 +218,17 @@
                 </div>
             </div>
             <div class="footer_info">
-                <span>г. Москва, ул. Строителей, 15</span>
+                <div class="adds">
+                  <span>г. Москва, ул. Строителей, 15</span>
+                </div>
                 <div class="f_about_shop">
                     <a href="#">Доставка</a>
                     <a href="#">Гарантия</a>
                     <a href="#">Контакты</a>
                 </div>
-                <span>Тел.: +7 (495) 495-95-95</span>
+                <div class="tel">
+                  <span>Тел.: +7 (495) 495-95-95</span>
+                </div>
             </div>
             <div class="external_links">
                 <div class="social">
@@ -228,6 +238,7 @@
                 </div>
                 <a href="#" class=""><span>Сайт Академии</span></a>
             </div>
+          </div>
         </footer>
 
 </body>
