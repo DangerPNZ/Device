@@ -640,18 +640,39 @@ footer {
 /* main */
 main {
   display: flex;
-  width: 1160px;
+  justify-content: center;
+  width: 100%;
   margin: 0 auto;
 }
 /* боковая панель */
 aside {
   display: flex;
   flex-direction: column;
-  width: 328px;
-  padding: 0 68px 0 60px;
+  align-items: flex-end;
+  width: 30%;
+  background-color: #eee;
 }
+.filter_title {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 25px 0 26px 0;
+  background-color: #dbdbdb;
+}
+.filter_title h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 268px;
+}
+/* работа с фонами */
 .price_controls {
   display: flex;
+}
+.filter_items {
+  display: flex;
+  flex-direction: column;
+  width: 268px;
 }
 /* разобраться, inputы это или нет! */
 .price_controls input {
@@ -682,20 +703,40 @@ aside {
 .results {
   display: flex;
   flex-direction: column;
-  width: 832px;
-  padding-left: 72px;
+  width: 70%;
 }
 .sort_header {
   display: flex;
+  width: 100%;
+  padding-left: 72px;
+  background-color: #ebebeb;
+}
+.sort_header_container {
+  display: flex;
   justify-content: space-between;
   width: 760px;
+  margin: 25px 0 23.5px 0;
 }
 .sort_mode {
   display: flex;
 }
+.sort_mode h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-right: 56px;
+}
 .criteria {
   display: flex;
-  align-items: center;
+  margin-top: -1px;
+}
+.criteria li {
+  margin-right: 29px;
+}
+.criteria a {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
 }
 .sort_direction {
   display: flex;
@@ -708,6 +749,8 @@ aside {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 832px;
+  padding-left: 72px;
 }
 .product {
   display: flex;
@@ -726,7 +769,9 @@ aside {
 .pages {
   display: flex;
   justify-content: space-between;
+  width: 760px;
   padding: 0 30px;
+  background-color: #ebebeb;
 }
 .page_list {
   display: flex;
