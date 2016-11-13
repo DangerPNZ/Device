@@ -595,6 +595,10 @@ footer {
   width: 400px;
 }
 /* catalog.html */
+.login_logout .logout {
+  margin-left: 20px;
+  color: #ac9e69;
+}
 .catalog_header::before {
   content: "";
   display: flex;
@@ -665,7 +669,24 @@ aside {
   letter-spacing: 0.2em;
   width: 268px;
 }
-/* работа с фонами */
+.filter_items {
+  padding-top: 65px;
+}
+.filter_items h3 {
+  position: relative;
+  margin-top: 18px;
+}
+.filter_items h3::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 200px;
+  height: 2px;
+  background-color: #000;
+  z-index: 10000;
+}
 .price_controls {
   display: flex;
 }
@@ -674,30 +695,94 @@ aside {
   flex-direction: column;
   width: 268px;
 }
+.range_controls {
+  display: flex;
+  align-items: center;
+}
+.scale {
+  display: flex;
+  position: relative;
+  margin: 35px 0 63px 0;
+  width: 200px;
+  height: 2px;
+  background-color: #dbdbdb;
+}
+.bar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 112px;
+  height: 2px;
+  background-color: #91c92f;
+}
+.toogle {
+  display: flex;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #eeeeee;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.toogle_min {
+  top: 50%;
+  left: 0;
+  margin-top: -6px;
+}
+.toogle_max {
+  top: 50%;
+  left: 112px;
+  margin-top: -6px;
+}
 /* разобраться, inputы это или нет! */
 .price_controls input {
   display: none;
   width: auto;
 }
-.color_selection {
+.filter_selection {
   display: flex;
   flex-direction: column;
+  padding-bottom: 27px;
 }
-.color_selection input[type="checkbox"] {
+.filter_selection h3 {
+  margin-bottom: 18px;
+}
+.filter_selection input[type="checkbox"] {
   display: none;
 }
-.color_selection label {
+.filter_selection label {
+  font-size: 14px;
+  line-height: 40px;
   padding-left: 40px;
 }
-.bluetooth_mode {
+.filter_selection input[type="radio"] {
+  display: none;
+}
+.filter_btn {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  margin-top: 13px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  z-index: 50;
 }
-.bluetooth_mode input[type="radio"] {
-  display: none;
-}
-.bluetooth_mode label {
-  padding-left: 40px;
+.filter_btn::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -4px;
+  width: 200px;
+  height: 8px;
+  background-color: #f0c52e;
+  z-index:-10;
 }
 /* Результаты поиска */
 .results {
@@ -715,7 +800,6 @@ aside {
   display: flex;
   justify-content: space-between;
   width: 760px;
-  margin: 25px 0 23.5px 0;
 }
 .sort_mode {
   display: flex;
@@ -724,11 +808,11 @@ aside {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-right: 56px;
+  margin: 25px 56px 26px 0;
 }
 .criteria {
   display: flex;
-  margin-top: -1px;
+  align-items: center;
 }
 .criteria li {
   margin-right: 29px;
@@ -738,8 +822,12 @@ aside {
   font-size: 14px;
   line-height: 18px;
 }
+.criteria .sort_inactive {
+  color: #a4a4a4;
+}
 .sort_direction {
   display: flex;
+  align-items: center;
 }
 .sort_direct_arrows {
   display: flex;
