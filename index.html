@@ -16,7 +16,7 @@
         <div class="shop_navigation">
             <form action="#" method="get">
                 <input type="search" name="search" class="search" placeholder="Поиск по сайту">
-                <a href="#" class="bth_search">Искать</a>
+                <a href="#" class="btn_search">Найти</a>
             </form>
             <div class="catalog_open">
                 <a href="catalog.html" class="catalog_link">Каталог товаров</a>
@@ -40,33 +40,33 @@
                 <a href="#">Контакты</a>
             </div>
         </div>
-        <nav class="catalog_menu">
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                    <a href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                    <a href="#">Экшн-камеры</a>
-                </li>
-            </ul>
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Фитнесс-браслеты</a>
-                </li>
-                <li>
-                    <a href="#">Умные часы</a>
-                </li>
-            </ul>
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Квадрокоптеры</a>
-                </li>
-            </ul>
-        </nav>
     </header>
+    <nav class="catalog_menu">
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+                <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+                <a href="#">Экшн-камеры</a>
+            </li>
+        </ul>
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Фитнесс-браслеты</a>
+            </li>
+            <li>
+                <a href="#">Умные часы</a>
+            </li>
+        </ul>
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Квадрокоптеры</a>
+            </li>
+        </ul>
+    </nav>
     <section class="promo_slider">
         <input type="radio" name="promo_selector" id="pr_1" checked>
         <input type="radio" name="promo_selector" id="pr_2">
@@ -203,6 +203,23 @@
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <a href="map.html" class="map"><img src="./img/map.jpg" alt="Карта" width="560" height="222" title="Развернуть карту"></a>
             <a href="feedback.html" class="info_btn feedback_mail">Напишите нам</a>
+        </div>
+        <div class="feedback">
+          <form action="#" method="post">
+          <div class="user_info">
+            <label for="client_name">Ваше имя:</label>
+            <input type="text" name="client_name" id="client_name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="user_info">
+            <label for="email">Ваш e-mail:</label>
+            <input type="text" name="client_mail" id="email" placeholder="Для отправки ответа">
+          </div>
+          <div class="message">
+            <label for="message">Текст письма:</label>
+            <textarea rows="8" id="message" placeholder="В свободной форме"></textarea>
+          </div>
+          <button type="submit" class="mail_submit">Отправить</button>
+          </form>
         </div>
     </section>
         <footer>
