@@ -870,6 +870,7 @@ input[name="adv_radio"] {
 /* Информация */
 .info {
   display: flex;
+  position: relative;
   width: 1160px;
   margin: 0 auto 90px auto;
 }
@@ -964,7 +965,7 @@ input[name="adv_radio"] {
 .feedback {
   display: none;
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 50%;
   margin-left: -480px;
   width: 960px;
@@ -972,6 +973,29 @@ input[name="adv_radio"] {
   background-color: #fff;
   box-shadow: 0 15px 45px -5px #a0a1a1;
   z-index: 4000;
+}
+.feedback_open {
+  display: flex;
+}
+.close_btn {
+  position: absolute;
+  right: 77px;
+  top: 25px;
+}
+.close_btn::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-position: -416px -10px;
+  background-image: url("../img/sprite.png");
+}
+.close_btn:hover::before {
+  background-position: -566px -10px;
+}
+.close_btn:active::before {
+  background-position: -491px -10px;
 }
 .feedback form {
   display: flex;
@@ -1072,6 +1096,23 @@ input[name="adv_radio"] {
 .mail_submit:hover::before {
   margin-top: -20px;
   height: 40px;
+}
+/* модальное окно развёрнутой карты */
+.detailed_map {
+  display: none;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  height: 559px;
+  background-image: url("../img/map_full.jpg");
+  box-shadow: 0 8px 15px 3px #d9d9d9,
+              5px 5px 15px 0 #d9d9d9,
+              -5px 5px 15px 0 #d9d9d9;
+}
+.map_expand {
+  display: flex;
 }
 /* footer */
 footer {
