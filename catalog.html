@@ -9,6 +9,8 @@
 </head>
 
 <body>
+  <!-- для вызова всплывающего меню, эксперимент -->
+  <input type="checkbox" id="menu_show">
     <header class="catalog_header">
         <div class="logo">
             <a href="index.html">Device</a>
@@ -20,6 +22,7 @@
             </form>
             <div class="catalog_open">
                   <a class="catalog_link">Каталог товаров</a>
+                  <label for="menu_show" title="Навигационное меню"></label>
             </div>
         </div>
         <div class="buyer_menu">
@@ -29,8 +32,8 @@
                     <a href="#" class="logout">Выйти</a>
                 </div>
                 <div class="selected_product_mode">
-                    <a href="#">Сравнить<span class="icon_"></span></a>
-                    <a href="#">Корзина<span class="icon_"></span></a>
+                    <a href="#" class="compare_link">Сравнить</a>
+                    <a href="#" class="basket">Корзина</a>
                 </div>
             </div>
             <div class="about_us">
@@ -41,33 +44,33 @@
                 <a href="#">Контакты</a>
             </div>
         </div>
-        <nav class="catalog_menu">
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                    <a href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                    <a href="#">Экшн-камеры</a>
-                </li>
-            </ul>
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Фитнесс-браслеты</a>
-                </li>
-                <li>
-                    <a href="#">Умные часы</a>
-                </li>
-            </ul>
-            <ul class="catalog_list">
-                <li>
-                    <a href="#">Квадрокоптеры</a>
-                </li>
-            </ul>
-        </nav>
     </header>
+    <nav class="catalog_menu">
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+                <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+                <a href="#">Экшн-камеры</a>
+            </li>
+        </ul>
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Фитнесс-браслеты</a>
+            </li>
+            <li>
+                <a href="#">Умные часы</a>
+            </li>
+        </ul>
+        <ul class="catalog_list">
+            <li>
+                <a href="#">Квадрокоптеры</a>
+            </li>
+        </ul>
+    </nav>
     <section class="paginator">
         <h1>Моноподы для селфи</h1>
         <div class="paginator_list">
@@ -97,10 +100,6 @@
                             <div class="toogle toogle_min"></div>
                             <div class="toogle toogle_max"></div>
                         </div>
-                    </div>
-                    <div class="price_controls">
-                        <input type="text" name="min-price" value="от 0">
-                        <input type="text" name="max-price" value="до 5000">
                     </div>
                 </div>
                 <div class="filter_selection">
@@ -147,10 +146,10 @@
                 <div class="sort_direction">
                     <ul class="sort_direct_arrows">
                         <li>
-                            <a href="#">Вверх<span class="arrow_inactive icon_"></span></a>
+                            <a href="#" class="arrow_up arrow_up_inactive"><span class="reader_descript">Вверх</span></a>
                         </li>
                         <li>
-                            <a href="#">Вниз<span class="icon_"></span></a>
+                            <a class="arrow_down"><span class="reader_descript">Вниз</span></a>
                         </li>
                     </ul>
                 </div>
@@ -227,9 +226,9 @@
                 <a href="index.html">Device</a>
             </div>
             <div class="f_personal_link">
-                <a href="#">Войти</a>
-                <a href="#">Сравнить</a>
-                <a href="#">Корзина</a>
+              <a href="#" class="ft_login">Войти</a>
+              <a href="#" class="ft_compare">Сравнить</a>
+              <a href="#" class="ft_basket">Корзина</a>
             </div>
         </div>
         <div class="footer_info">
@@ -247,11 +246,11 @@
         </div>
         <div class="external_links">
             <div class="social">
-                <a href="#" class=""><span>Facebook</span></a>
-                <a href="#" class=""><span>Instagram</span></a>
-                <a href="#" class=""><span>Tweeter</span></a>
+                <a href="#" class="facebook"><span class="reader_descript">Facebook</span></a>
+                <a href="#" class="instagram"><span class="reader_descript">Instagram</span></a>
+                <a href="#" class="tweeter"><span class="reader_descript">Tweeter</span></a>
             </div>
-            <a href="#" class=""><span>Сайт Академии</span></a>
+            <a href="#" class="academylogo"><span class="reader_descript">Сайт Академии</span></a>
         </div>
       </div>
     </footer>

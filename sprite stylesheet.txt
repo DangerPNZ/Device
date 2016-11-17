@@ -1,0 +1,437 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-action_cam {
+    width: 71px;
+    height: 87px;
+    background-position: -10px -10px;
+}
+
+.sprite-action_cam_dn {
+    width: 71px;
+    height: 87px;
+    background-position: -101px -10px;
+}
+
+.sprite-basket {
+    width: 12px;
+    height: 12px;
+    background-position: -192px -10px;
+}
+
+.sprite-basket_dn {
+    width: 12px;
+    height: 12px;
+    background-position: -224px -10px;
+}
+
+.sprite-basket_ft {
+    width: 12px;
+    height: 12px;
+    background-position: -256px -10px;
+}
+
+.sprite-basket_ft_dn {
+    width: 12px;
+    height: 12px;
+    background-position: -288px -10px;
+}
+
+.sprite-basket_ft_hr {
+    width: 12px;
+    height: 12px;
+    background-position: -320px -10px;
+}
+
+.sprite-basket_hr {
+    width: 12px;
+    height: 12px;
+    background-position: -352px -10px;
+}
+
+.sprite-check {
+    width: 12px;
+    height: 7px;
+    background-position: -384px -10px;
+}
+
+.sprite-close_btn {
+    width: 55px;
+    height: 55px;
+    background-position: -416px -10px;
+}
+
+.sprite-close_btn_dn {
+    width: 55px;
+    height: 55px;
+    background-position: -491px -10px;
+}
+
+.sprite-close_btn_hr {
+    width: 55px;
+    height: 55px;
+    background-position: -566px -10px;
+}
+
+.sprite-compare {
+    width: 10px;
+    height: 10px;
+    background-position: -641px -10px;
+}
+
+.sprite-compare_dn {
+    width: 10px;
+    height: 10px;
+    background-position: -671px -10px;
+}
+
+.sprite-compare_ft {
+    width: 10px;
+    height: 10px;
+    background-position: -701px -10px;
+}
+
+.sprite-compare_ft_dn {
+    width: 10px;
+    height: 10px;
+    background-position: -731px -10px;
+}
+
+.sprite-compare_ft_hr {
+    width: 10px;
+    height: 10px;
+    background-position: -761px -10px;
+}
+
+.sprite-compare_hr {
+    width: 10px;
+    height: 10px;
+    background-position: -791px -10px;
+}
+
+.sprite-credit {
+    width: 156px;
+    height: 188px;
+    background-position: -821px -10px;
+}
+
+.sprite-delivery {
+    width: 136px;
+    height: 164px;
+    background-position: -997px -10px;
+}
+
+.sprite-facebook {
+    width: 39px;
+    height: 38px;
+    background-position: -1153px -10px;
+}
+
+.sprite-facebook_active {
+    width: 39px;
+    height: 38px;
+    background-position: -1212px -10px;
+}
+
+.sprite-facebook_hover {
+    width: 39px;
+    height: 38px;
+    background-position: -1271px -10px;
+}
+
+.sprite-ft_br {
+    width: 107px;
+    height: 65px;
+    background-position: -1330px -10px;
+}
+
+.sprite-ft_br_dn {
+    width: 107px;
+    height: 65px;
+    background-position: -1457px -10px;
+}
+
+.sprite-htmlacademy {
+    width: 27px;
+    height: 34px;
+    background-position: -1584px -10px;
+}
+
+.sprite-htmlacademy_active {
+    width: 27px;
+    height: 34px;
+    background-position: -1631px -10px;
+}
+
+.sprite-htmlacademy_hover {
+    width: 27px;
+    height: 34px;
+    background-position: -1678px -10px;
+}
+
+.sprite-insta {
+    width: 39px;
+    height: 38px;
+    background-position: -1725px -10px;
+}
+
+.sprite-insta_active {
+    width: 39px;
+    height: 38px;
+    background-position: -1784px -10px;
+}
+
+.sprite-insta_hover {
+    width: 39px;
+    height: 38px;
+    background-position: -1843px -10px;
+}
+
+.sprite-logo-dji {
+    width: 260px;
+    height: 100px;
+    background-position: -1902px -10px;
+}
+
+.sprite-logo-gopro_hover {
+    width: 260px;
+    height: 100px;
+    background-position: -2182px -10px;
+}
+
+.sprite-logo-gp {
+    width: 260px;
+    height: 100px;
+    background-position: -2462px -10px;
+}
+
+.sprite-logo-sp {
+    width: 260px;
+    height: 100px;
+    background-position: -2742px -10px;
+}
+
+.sprite-logo-sp_gadgets_hover {
+    width: 260px;
+    height: 100px;
+    background-position: -3022px -10px;
+}
+
+.sprite-logo-vive {
+    width: 260px;
+    height: 100px;
+    background-position: -3302px -10px;
+}
+
+.sprite-logo_dji_hover {
+    width: 260px;
+    height: 100px;
+    background-position: -3582px -10px;
+}
+
+.sprite-logo_vive_hover {
+    width: 260px;
+    height: 100px;
+    background-position: -3862px -10px;
+}
+
+.sprite-paginator_mark {
+    width: 4px;
+    height: 7px;
+    background-position: -4142px -10px;
+}
+
+.sprite-plus {
+    width: 16px;
+    height: 16px;
+    background-position: -4166px -10px;
+}
+
+.sprite-plus_dn {
+    width: 16px;
+    height: 16px;
+    background-position: -4202px -10px;
+}
+
+.sprite-plus_hr {
+    width: 16px;
+    height: 16px;
+    background-position: -4238px -10px;
+}
+
+.sprite-qc {
+    width: 132px;
+    height: 69px;
+    background-position: -4274px -10px;
+}
+
+.sprite-qc_dn {
+    width: 132px;
+    height: 69px;
+    background-position: -4426px -10px;
+}
+
+.sprite-radiocheck {
+    width: 9px;
+    height: 9px;
+    background-position: -4578px -10px;
+}
+
+.sprite-search {
+    width: 16px;
+    height: 16px;
+    background-position: -4607px -10px;
+}
+
+.sprite-sl_st {
+    width: 86px;
+    height: 117px;
+    background-position: -4643px -10px;
+}
+
+.sprite-sl_st_dn {
+    width: 86px;
+    height: 117px;
+    background-position: -4749px -10px;
+}
+
+.sprite-slider_1-png {
+    width: 384px;
+    height: 486px;
+    background-position: -4855px -10px;
+}
+
+.sprite-slider_2 {
+    width: 345px;
+    height: 485px;
+    background-position: -5259px -10px;
+}
+
+.sprite-slider_3-png {
+    width: 526px;
+    height: 334px;
+    background-position: -5624px -10px;
+}
+
+.sprite-sort-down {
+    width: 17px;
+    height: 9px;
+    background-position: -6170px -10px;
+}
+
+.sprite-sort-down_act {
+    width: 17px;
+    height: 9px;
+    background-position: -6207px -10px;
+}
+
+.sprite-sort-down_hr {
+    width: 17px;
+    height: 9px;
+    background-position: -6244px -10px;
+}
+
+.sprite-sort-up {
+    width: 17px;
+    height: 9px;
+    background-position: -6281px -10px;
+}
+
+.sprite-sort-up_act {
+    width: 17px;
+    height: 9px;
+    background-position: -6318px -10px;
+}
+
+.sprite-sort-up_hr {
+    width: 17px;
+    height: 9px;
+    background-position: -6355px -10px;
+}
+
+.sprite-twitter {
+    width: 38px;
+    height: 38px;
+    background-position: -6392px -10px;
+}
+
+.sprite-twitter_active {
+    width: 38px;
+    height: 38px;
+    background-position: -6450px -10px;
+}
+
+.sprite-twitter_hover {
+    width: 38px;
+    height: 38px;
+    background-position: -6508px -10px;
+}
+
+.sprite-user {
+    width: 13px;
+    height: 12px;
+    background-position: -6566px -10px;
+}
+
+.sprite-user_dn {
+    width: 13px;
+    height: 12px;
+    background-position: -6599px -10px;
+}
+
+.sprite-user_ft {
+    width: 13px;
+    height: 12px;
+    background-position: -6632px -10px;
+}
+
+.sprite-user_ft_dn {
+    width: 13px;
+    height: 12px;
+    background-position: -6665px -10px;
+}
+
+.sprite-user_ft_hr {
+    width: 13px;
+    height: 12px;
+    background-position: -6698px -10px;
+}
+
+.sprite-user_hvr {
+    width: 13px;
+    height: 12px;
+    background-position: -6731px -10px;
+}
+
+.sprite-vr {
+    width: 97px;
+    height: 55px;
+    background-position: -6764px -10px;
+}
+
+.sprite-vr_dn {
+    width: 97px;
+    height: 55px;
+    background-position: -6881px -10px;
+}
+
+.sprite-warranty {
+    width: 171px;
+    height: 195px;
+    background-position: -6998px -10px;
+}
+
+.sprite-wth {
+    width: 56px;
+    height: 98px;
+    background-position: -7189px -10px;
+}
+
+.sprite-wth_dn {
+    width: 56px;
+    height: 98px;
+    background-position: -7265px -10px;
+}

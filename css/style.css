@@ -64,37 +64,6 @@ header {
   background-color: #f7e296;
   z-index: -10;
 }
-nav {
-    display: none;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 199px;
-    left: 50%;
-    margin-left: -580px;
-    padding: 0 60px 33px 60px;
-    width: 1160px;
-    background-color: #f7e296;
-    z-index: 2000;
-}
-.catalog_list {
-  display: flex;
-  flex-direction: column;
-  max-width: 200px;
-  margin-right: 55px;
-  z-index: 10000;
-}
-.catalog_list li {
-  margin: 7px 0;
-}
-.catalog_list a {
-  font-family: "OpenSans Light", "Arial", sans-serif;
-}
-.catalog_list a:hover {
-  color: #635a35;
-}
-.catalog_list a:active {
-  color: #ac9e5c;
-}
 .logo {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +74,7 @@ nav {
   font-size: 48px;
   text-transform: uppercase;
   letter-spacing: 0.01em;
-  margin-left: -0.01em;
+  margin-left: -0.04em;
 }
 .logo a:hover {
   color: #464646;
@@ -122,11 +91,24 @@ nav {
 }
 .search {
   width: 350px;
+  padding-left: 39px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 15px;
   border: none;
   outline: none;
   color: #ac9e69;
+  background-color: transparent;
+}
+.shop_navigation::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background-position: -4607px -10px;
+  background-image: url("../img/sprite.png");
   background-color: transparent;
 }
 .search:hover {
@@ -169,12 +151,46 @@ nav {
   display: flex;
 }
 .catalog_open {
-  padding-top: 42px;
+  display: flex;
+  padding-top: 43px;
 }
 .catalog_link {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+label[for="menu_show"] {
+  display: flex;
+  position: relative;
+  margin: 2px 0 0 12px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+label[for="menu_show"]::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 16px;
+  background-color: #b8a974;
+}
+label[for="menu_show"]::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 7px;
+  width: 16px;
+  height: 2px;
+  background-color: #b8a974;
+}
+label[for="menu_show"]:hover::before {
+  background-color: #000;
+}
+label[for="menu_show"]:hover::after {
+  background-color: #000;
 }
 .buyer_menu {
     display: flex;
@@ -209,11 +225,77 @@ nav {
   flex-wrap: wrap;
   width: 280px;
 }
+.login {
+  position: relative;
+  padding-left: 27px;
+}
+.login::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 13px;
+  height: 12px;
+  background-position: -6566px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.login:hover::before {
+  background-position: -6731px -10px;
+}
+.login:active::before {
+  background-position: -6599px -10px;
+}
 .selected_product_mode {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 220px;
+}
+.compare_link {
+  position: relative;
+  padding-left: 27px;
+}
+.compare_link::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background-position: -641px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.compare_link:hover::before {
+  background-position: -791px -10px;
+}
+.compare_link:active::before {
+  background-position: -671px -10px;
+}
+.basket {
+  position: relative;
+  padding-left: 27px;
+}
+.basket::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  background-position: -192px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.basket:hover::before {
+  background-position: -352px -10px;
+}
+.basket:active::before {
+  background-position: -224px -10px;
 }
 .about_us {
     display: flex;
@@ -231,6 +313,44 @@ nav {
 }
 .adv_links a {
   margin-right: 31px;
+}
+/* всплывающее навигационное меню */
+#menu_show {
+  display: none;
+}
+#menu_show:checked ~ nav {
+  display: flex;
+}
+nav {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 199px;
+    left: 50%;
+    margin-left: -580px;
+    padding: 0 60px 33px 60px;
+    width: 1160px;
+    background-color: #f7e296;
+    z-index: 2000;
+}
+.catalog_list {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin-right: 55px;
+  z-index: 10000;
+}
+.catalog_list li {
+  margin: 7px 0;
+}
+.catalog_list a {
+  font-family: "OpenSans Light", "Arial", sans-serif;
+}
+.catalog_list a:hover {
+  color: #635a35;
+}
+.catalog_list a:active {
+  color: #ac9e5c;
 }
 /* слайдер */
 .promo_slider {
@@ -274,12 +394,10 @@ nav {
 #pr_3:checked ~ .promo_toogle label[for="pr_3"] {
   border-color: #080808;
 }
-.toogle_descript {
-  font-size: 0;
-}
 .pr_slide {
   display: none;
   flex-direction: column;
+  width: 560px;
 }
 .pr_slide::before {
   content: "";
@@ -298,6 +416,42 @@ nav {
   font-size: 179.2px;
   color: #fff;
   z-index: -10;
+}
+.pr_slide1::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 53px;
+  left: 90px;
+  width: 384px;
+  height: 486px;
+  background-position: -4855px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.pr_slide2::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 65px;
+  left: 118px;
+  width: 345px;
+  height: 485px;
+  background-position: -5259px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.pr_slide3::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 117px;
+  left: 30px;
+  width: 526px;
+  height: 334px;
+  background-position: -5624px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
 }
 .pr_slide h4 {
   font-size: 47px;
@@ -338,16 +492,8 @@ nav {
   z-index: -10;
 }
 .pr_slide a:hover::after {
-  content: "";
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 50%;
   margin-top: -20px;
-  width: 220px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index: -10;
 }
 .pr_slide a:active {
   color: #a88a20;
@@ -398,18 +544,104 @@ nav {
   background-color: #f7e296;
 }
 .nav_item:hover::before {
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 160px;
-  height: 160px;
   background-color: #f0c52e;
+}
+.nav_item:nth-child(1)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 52px;
+  left: 32px;
+  width: 97px;
+  height: 55px;
+  background-position: -6764px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(1)::after {
+  background-position: -6881px -10px;
+}
+.nav_item:nth-child(2)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 43px;
+  left: 39px;
+  width: 86px;
+  height: 117px;
+  background-position: -4643px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(2)::after {
+  background-position: -4749px -10px;
+}
+.nav_item:nth-child(3)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 37px;
+  left: 49px;
+  width: 71px;
+  height: 87px;
+  background-position: -10px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(3)::after {
+  background-position: -101px -10px;
+}
+.nav_item:nth-child(4)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 49px;
+  left: 29px;
+  width: 107px;
+  height: 65px;
+  background-position: -1330px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(4)::after {
+  background-position: -1457px -10px;
+}
+.nav_item:nth-child(5)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 31px;
+  left: 55px;
+  width: 56px;
+  height: 98px;
+  background-position: -7189px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(5)::after {
+  background-position: -7265px -10px;
+}
+.nav_item:nth-child(6)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 47px;
+  left: 13px;
+  width: 132px;
+  height: 69px;
+  background-position: -4274px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.nav_item:active:nth-child(6)::after {
+  background-position: -4426px -10px;
 }
 .nav_item h2 {
   margin-top: 34px;
   font-size: 18px;
+}
+.nav_item:active h2 {
+  color: #b2b2b2;
 }
 /* Слайдер Особенности */
 .advantages_slider {
@@ -489,16 +721,8 @@ input[name="adv_radio"] {
   z-index: -10;
 }
 .advantages_list a:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 0;
   margin-top: -20px;
-  width: 160px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index: -10;
 }
 #advantages_delivery:checked ~ .adv_toogle_menu .advantages_list li:nth-child(1) a,
 #advantages_guarantee:checked ~ .adv_toogle_menu .advantages_list li:nth-child(2) a,
@@ -514,6 +738,43 @@ input[name="adv_radio"] {
 .adv_slide {
   display: none;
   flex-direction: column;
+  position: relative;
+}
+.adv_slide:nth-child(1)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 27px;
+    right: 66px;
+    width: 136px;
+    height: 164px;
+    background-position: -997px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.adv_slide:nth-child(2)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 46px;
+    width: 171px;
+    height: 195px;
+    background-position: -6998px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.adv_slide:nth-child(3)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 1px;
+    right: 69px;
+    width: 156px;
+    height: 188px;
+    background-position: -821px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
 }
 .adv_slide h3 {
   font-size: 47px;
@@ -542,9 +803,69 @@ input[name="adv_radio"] {
 }
 .manufacturers a {
   display: flex;
+  position: relative;
   width: 260px;
   height: 100px;
-  background-color: #a9fa6e;
+}
+.manufacturers a:nth-child(1)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    width: 260px;
+    height: 100px;
+    background-position: -1902px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.manufacturers a:nth-child(1):hover::before {
+  background-position: -3582px -10px;
+}
+.manufacturers a:nth-child(2)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    width: 260px;
+    height: 100px;
+    background-position: -2742px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.manufacturers a:nth-child(2):hover::before {
+  background-position: -3022px -10px;
+}
+.manufacturers a:nth-child(3)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    width: 260px;
+    height: 100px;
+    background-position: -2462px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.manufacturers a:nth-child(3):hover::before {
+  background-position: -2182px -10px;
+}
+.manufacturers a:nth-child(4)::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    width: 260px;
+    height: 100px;
+    background-position: -3302px -10px;
+    background-image: url("../img/sprite.png");
+    background-color: transparent;
+}
+.manufacturers a:nth-child(4):hover::before {
+  background-position: -3862px -10px;
 }
 /* Информация */
 .info {
@@ -613,16 +934,8 @@ input[name="adv_radio"] {
   z-index: -10;
 }
 .info_btn:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 50%;
   margin-top: -20px;
-  width: 260px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index: -10;
 }
 .info_btn:active {
   color: #a88a20;
@@ -757,16 +1070,8 @@ input[name="adv_radio"] {
   z-index: -10;
 }
 .mail_submit:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 0;
   margin-top: -20px;
-  width: 200px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index: -10;
 }
 /* footer */
 footer {
@@ -778,8 +1083,19 @@ footer {
 .footer_container {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 1160px;
   margin: 0 auto;
+}
+.footer_container::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  width: 80px;
+  height: 7px;
+  background-color: #f7e184;
 }
 .f_logo a {
   font-size: 48px;
@@ -806,16 +1122,72 @@ footer {
   width: 330px;
 }
 .f_personal_link a {
+  position: relative;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 15px;
   line-height: 36px;
   color: #c8c8c8;
+  padding-left: 31px;
 }
 .f_personal_link a:hover {
   color: #fff;
 }
 .f_personal_link a:active {
   color: #7e7e7e;
+}
+.ft_login::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  width: 13px;
+  height: 12px;
+  background-position: -6632px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.ft_login:hover::before {
+  background-position: -6698px -10px;
+}
+.ft_login:active::before {
+  background-position: -6665px -10px;
+}
+.ft_compare::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 15px;
+  left: 11px;
+  width: 10px;
+  height: 10px;
+  background-position: -701px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.ft_compare:hover::before {
+  background-position: -761px -10px;
+}
+.ft_compare:active::before {
+  background-position: -731px -10px;
+}
+.ft_basket::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  background-position: -256px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.ft_basket:hover::before {
+  background-position: -320px -10px;
+}
+.ft_basket:active::before {
+  background-position: -288px -10px;
 }
 .footer_info {
   display: flex;
@@ -860,9 +1232,118 @@ footer {
 .social {
   display: flex;
   justify-content: center;
+  margin: 30px 0 0 -10px;
+  padding: 20px;
   width: 400px;
 }
+.social a {
+  position: relative;
+  margin: 0 8px;
+  min-width: 38px;
+  min-height: 38px;
+}
+.facebook::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 40px;
+  height: 39px;
+  background-position: -1153px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.facebook:hover::before {
+  background-position: -1271px -10px;
+}
+.facebook:active::before {
+  background-position: -1212px -10px;
+}
+.instagram::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 40px;
+  height: 39px;
+  background-position: -1725px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.instagram:hover::before {
+  background-position: -1843px -10px;
+}
+.instagram:active::before {
+  background-position: -1784px -10px;
+}
+.tweeter::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 39px;
+  height: 39px;
+  background-position: -6392px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.tweeter:hover::before {
+  background-position: -6508px -10px;
+}
+.tweeter:active::before {
+  background-position: -6450px -10px;
+}
+.academylogo {
+  margin-top: 50px;
+}
+.academylogo::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 27px;
+  height: 34px;
+  background-position: -1584px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.academylogo:hover::before {
+  background-position: -1678px -10px;
+}
+.academylogo:active::before {
+  background-position: -1631px -10px;
+}
+/* скрытый текст для читающих программ */
+.reader_descript {
+  font-size: 0;
+}
 /* catalog.html */
+.login_logout .personal_area {
+  position: relative;
+  padding-left: 27px;
+}
+.personal_area::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 13px;
+  height: 12px;
+  background-position: -6566px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.personal_area:hover::before {
+  background-position: -6731px -10px;
+}
+.personal_area:active::before {
+  background-position: -6599px -10px;
+}
 .login_logout .logout {
   margin-left: 20px;
   color: #ac9e69;
@@ -911,6 +1392,21 @@ footer {
 .paginator_page {
   display: flex;
   flex-wrap: wrap;
+}
+.paginator_page a {
+  position: relative;
+}
+.paginator_page a::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 6px;
+  left: -23px;
+  width: 4px;
+  height: 8px;
+  background-position: -4142px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
 }
 .paginator_page li {
   margin-left: 40px;
@@ -1016,10 +1512,27 @@ aside {
   left: 112px;
   margin-top: -6px;
 }
-/* разобраться, inputы это или нет! */
-.price_controls input {
-  display: none;
-  width: auto;
+.toogle_min::before {
+  content: "от 0";
+  display: flex;
+  position: absolute;
+  top: 19px;
+  left: -1px;
+  width: 60px;
+  font-family: "Gilgoy Light", "Arial", sans-serif;
+  font-size: 14px;
+  color: #bfbfbf;
+}
+.toogle_max::before {
+  content: "до 5000";
+  display: flex;
+  position: absolute;
+  top: 19px;
+  left: -22px;
+  width: 60px;
+  font-family: "Gilgoy Light", "Arial", sans-serif;
+  font-size: 14px;
+  color: #bfbfbf;
 }
 .filter_selection {
   display: flex;
@@ -1032,13 +1545,85 @@ aside {
 .filter_selection input[type="checkbox"] {
   display: none;
 }
+.filter_selection input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: -2px;
+  width: 23px;
+  height: 23px;
+  background-color: #dbdbdb;
+}
+.filter_selection input[type="checkbox"] + label:hover::before {
+  background-color: #cecece;
+}
+.filter_selection input[type="checkbox"] + label:active::before {
+  background-color: #c4c4c4;
+}
+.filter_selection input[type="checkbox"]:disabled + label {
+  color: #c8c8c8;
+}
+.filter_selection input[type="checkbox"]:disabled + label::before {
+  background-color: #e6e6e6;
+}
+.filter_selection input[type="checkbox"]:checked + label::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 12px;
+  height: 7px;
+  background-position: -384px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
 .filter_selection label {
+  position: relative;
   font-size: 14px;
   line-height: 40px;
   padding-left: 40px;
 }
 .filter_selection input[type="radio"] {
   display: none;
+}
+.filter_selection input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: -2px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #c8c8c8;
+  box-sizing: content-box;
+}
+.filter_selection input[type="radio"] + label:hover::before {
+  border-color: #bcbcbc;
+}
+.filter_selection input[type="radio"] + label:active::before {
+  border-color: #acacac;
+}
+.filter_selection input[type="radio"]:disabled + label {
+  color: #c8c8c8;
+}
+.filter_selection input[type="radio"]:disabled + label::before {
+  border-color: #e6e6e6;
+}
+.filter_selection input[type="radio"]:checked + label::after{
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 14px;
+  left: 5.5px;
+  width: 10px;
+  height: 10px;
+  background-position: -4578px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
 }
 .filter_btn {
   display: flex;
@@ -1064,16 +1649,8 @@ aside {
   z-index:-10;
 }
 .filter_btn:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 0;
   margin-top: -20px;
-  width: 200px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index:-10;
 }
 .filter_btn:active {
   color: #a88a20;
@@ -1129,6 +1706,50 @@ aside {
 .sort_direct_arrows {
   display: flex;
 }
+.sort_direct_arrows a {
+  position: relative;
+  margin: 0 21px;
+}
+.arrow_up_inactive::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 17px;
+  height: 9px;
+  background-position: -6281px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+.arrow_up_inactive:hover::before {
+  background-position: -6355px -10px;
+}
+/* стиль для активной стрелки Вверх
+.arrow_up::before {
+  background-position: -6318px -10px;
+}
+*/
+.arrow_down::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 17px;
+  height: 9px;
+  background-position: -6207px -10px;
+  background-image: url("../img/sprite.png");
+  background-color: transparent;
+}
+/* стили для не активной стрелки Вниз, добавить class="arrow_down_inactive"
+.arrow_down_inactive::before {
+  background-position: -6281px -10px;
+}
+.arrow_down_inactive:hover::before {
+  background-position: -6244px -10px;
+}
+*/
 /* карточки товаров */
 .found_product {
   display: flex;
@@ -1159,7 +1780,6 @@ aside {
 .product:hover img {
   opacity: 0.4;
 }
-/* небольшая импровизация :-) */
 .product:hover .icon_new {
   color: #f0c52e;
   border-color: #f0c52e;
@@ -1188,16 +1808,8 @@ aside {
   z-index: -10;
 }
 .buy:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 0;
   margin-top: -20px;
-  width: 200px;
   height: 40px;
-  background-color: #f0c52e;
-  z-index: -10;
 }
 .buy:active {
   color: #a88a20;
