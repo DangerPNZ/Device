@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    padding: 0 auto;
     font-family: "OpenSans Light", "Arial", sans-serif;
 }
 h1,
@@ -961,6 +962,10 @@ input[name="adv_radio"] {
   height: 7px;
   background-color: #000;
 }
+@keyframes decompression {
+  0% {transform: scaleY(0.2) ;}
+  100% {transform: scaleY(1.0);}
+}
 /* Модальное окно обратной связи */
 .feedback {
   display: none;
@@ -971,11 +976,14 @@ input[name="adv_radio"] {
   width: 960px;
   padding: 95px 100px 85px 100px;
   background-color: #fff;
-  box-shadow: 0 15px 45px -5px #a0a1a1;
+  box-shadow: 0 15px 25px -5px #bbb,
+              30px 0 50px -30px #000,
+              -30px 0 50px -30px #000;
   z-index: 4000;
 }
 .feedback_open {
   display: flex;
+  animation: decompression 0.4s;
 }
 .close_btn {
   position: absolute;
@@ -997,7 +1005,7 @@ input[name="adv_radio"] {
 .close_btn:active::before {
   background-position: -491px -10px;
 }
-.feedback form {
+.feedback_form {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1113,13 +1121,14 @@ input[name="adv_radio"] {
 }
 .map_expand {
   display: flex;
+  animation: decompression 0.4s;
 }
 /* footer */
 footer {
   display: flex;
   width: 100%;
   background-color: #464646;
-  padding: 54px 0 54px 0;
+  padding: 54px 0;
 }
 .footer_container {
   display: flex;
@@ -1872,7 +1881,8 @@ aside {
 .product_descript {
   display: flex;
   justify-content: space-between;
-  margin-top: 34px;
+  margin-top: 33px;
+  align-items: baseline;
 }
 .icon_new {
   position: absolute;
@@ -1886,7 +1896,7 @@ aside {
   border-radius: 50%;
   cursor: default;
 }
-.product_descript h2 {
+.product_descript a {
   width: 260px;
   font-size: 18px;
   min-height: 36px;
@@ -1903,7 +1913,7 @@ aside {
   justify-content: space-between;
   width: 760px;
   background-color: #ebebeb;
-  margin: -12px 0 73px 0;
+  margin: -11px 0 74px 0;
 }
 .leaf_results {
   text-transform: uppercase;
