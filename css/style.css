@@ -18,11 +18,8 @@
     box-sizing: border-box;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
-    padding: 0 auto;
+    margin: 0 auto;
     font-family: "OpenSans Light", "Arial", sans-serif;
 }
 h1,
@@ -43,6 +40,10 @@ ul {
 }
 li {
     list-style: none;
+}
+.container {
+  min-width: 1240px;
+  padding: 0 auto;
 }
 /* хеддер */
 header {
@@ -646,6 +647,7 @@ nav {
 }
 /* Слайдер Особенности */
 .advantages_slider {
+  display: flex;
   width: 100%;
   position: relative;
 }
@@ -1126,16 +1128,16 @@ input[name="adv_radio"] {
 /* footer */
 footer {
   display: flex;
-  width: 100%;
+  min-width: 1240px;
   background-color: #464646;
-  padding: 54px 0;
+  padding: 0 auto;
 }
 .footer_container {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 1160px;
-  margin: 0 auto;
+  margin: 54px auto;
 }
 .footer_container::before {
   content: "";
