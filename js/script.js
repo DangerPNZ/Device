@@ -25,10 +25,16 @@ feedback_btn.addEventListener("click", function(event){
     if (!input_name.value || !input_mail.value || !message.value){
       event.preventDefault();
     }
+    if (!input_name.value) {
+       input_name.classList.add("send_error");
+    }
+    if (!input_mail.value) {
+       input_mail.classList.add("send_error");
+    }
+    if (!message.value) {
+       message.classList.add("send_error");
+    }
   });
-  if (!message.value){
-    input_name.classList.add("send_error");
-  };
 });
 
 var map_expand = document.querySelector(".map");

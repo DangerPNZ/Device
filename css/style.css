@@ -18,6 +18,7 @@
     box-sizing: border-box;
 }
 body {
+    min-width: 1240px;
     width: 100%;
     margin: 0 auto;
     font-family: "OpenSans Light", "Arial", sans-serif;
@@ -43,6 +44,7 @@ li {
 }
 .container {
   min-width: 1240px;
+  width: 100%;
   padding: 0 auto;
 }
 /* хеддер */
@@ -189,10 +191,16 @@ label[for="menu_show"]::after {
   background-color: #b8a974;
 }
 label[for="menu_show"]:hover::before {
-  background-color: #000;
+  background-color: #cdbc7f;
 }
 label[for="menu_show"]:hover::after {
-  background-color: #000;
+  background-color: #cdbc7f;
+}
+label[for="menu_show"]:active::before {
+  background-color: #e2cf8a;
+}
+label[for="menu_show"]:active::after {
+  background-color: #e2cf8a;
 }
 .buyer_menu {
     display: flex;
@@ -972,7 +980,7 @@ input[name="adv_radio"] {
 .feedback {
   display: none;
   position: fixed;
-  top: 0px;
+  top: 15px;
   left: 50%;
   margin-left: -480px;
   width: 960px;
@@ -1073,7 +1081,7 @@ input[name="adv_radio"] {
   color: #464646;
 }
 /* Добавляем этот класс незаполненным до отправки полям формы (через JS) */
-.send_error {
+.feedback .send_error {
   color: #b09f9f;
   background-color: #f6dada;
 }
@@ -1633,6 +1641,7 @@ aside {
 }
 .filter_selection label {
   position: relative;
+  min-height: 14px;
   font-size: 14px;
   line-height: 40px;
   padding-left: 40px;
@@ -1665,17 +1674,20 @@ aside {
 .filter_selection input[type="radio"]:disabled + label::before {
   border-color: #e6e6e6;
 }
+/* redio checked */
 .filter_selection input[type="radio"]:checked + label::after{
   content: "";
   display: flex;
   position: absolute;
-  top: 14px;
+  top: 50%;
+  margin-top: -5px;
   left: 5.5px;
-  width: 10px;
-  height: 10px;
-  background-position: -4578px -10px;
-  background-image: url("../img/sprite.png");
+  width: 6px;
+  height: 6px;
+  border: 2px solid #000;
   background-color: transparent;
+  border-radius: 50%;
+  box-sizing: content-box;
 }
 .filter_btn {
   display: flex;
