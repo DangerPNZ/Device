@@ -112,8 +112,8 @@ background-color: transparent;
   width: 350px;
 }
 .search {
-  width: 350px;
-  padding-left: 39px;
+  width: 310px;
+  margin-left: 39px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 15px;
   border: none;
@@ -126,9 +126,6 @@ background-color: transparent;
 }
 .search:focus {
   color: #000;
-}
-.search:focus + .btn_search {
-  display: flex;
 }
 .btn_search {
   display: none;
@@ -157,7 +154,7 @@ background-color: transparent;
   height: 2px;
   background-color: #000;
 }
-.search:focus .btn_search {
+.btn_show {
   display: flex;
 }
 .general_navigation {
@@ -474,6 +471,7 @@ nav {
   font-size: 47px;
   min-height: 98px;
   margin: 81px 0 2px 0;
+  z-index: 1500;
 }
 .pr_slide1 h4 {
   width: 390px;

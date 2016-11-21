@@ -1,15 +1,17 @@
 var feedback_btn = document.querySelector(".feedback_mail");
 var feedback_modal = document.querySelector(".feedback");
-var feedback_form = feedback_modal.querySelector(".feedback_form");
+var feedback_form = document.querySelector(".feedback_form");
 var input_name = document.querySelector("#client_name");
 var input_mail = document.querySelector("#email");
 var message = document.querySelector("textarea");
 
-feedback_btn.addEventListener("click", function(event){
+if (feedback_modal) {
+  var feedback_modal_close = feedback_modal.querySelector(".close_btn");
+  feedback_btn.addEventListener("click", function(event){
   event.preventDefault();
   feedback_modal.classList.add("feedback_open");
   input_name.focus();
-  var feedback_modal_close = feedback_modal.querySelector(".close_btn");
+
   feedback_modal_close.addEventListener("click", function(event){
     event.preventDefault();
     feedback_modal.classList.remove("feedback_open");
@@ -24,7 +26,6 @@ feedback_btn.addEventListener("click", function(event){
   feedback_form.addEventListener("submit", function(event) {
     if (!input_name.value || !input_mail.value || !message.value){
       event.preventDefault();
-      alert("Для отправки сообщения, пожалуйста, заполните все поля.");
     }
     if (!input_name.value) {
        input_name.classList.add("send_error");
@@ -46,11 +47,13 @@ feedback_btn.addEventListener("click", function(event){
     }
   });
 });
+}
 
 var map_expand = document.querySelector(".map");
 var map_modal = document.querySelector(".detailed_map");
 
-map_expand.addEventListener("click", function(event){
+if (map_modal) {
+  map_expand.addEventListener("click", function(event){
   event.preventDefault();
   map_modal.classList.add("map_expand");
   var map_close = map_modal.querySelector(".close_btn");
@@ -65,4 +68,14 @@ map_expand.addEventListener("click", function(event){
           }
       }
   });
+});
+}
+
+var input_search = document.querySelector(".search");
+var btn_search = document.querySelector(".btn_search");
+input_search.addEventListener("input", function(){
+  btn_search.classList.add("btn_show");
+  if (!input_search.value) {
+    btn_search.classList.remove("btn_show");
+  }
 });
