@@ -10,15 +10,14 @@
 
 <body>
   <div class="container">
-    <!-- для вызова всплывающего меню, эксперимент -->
-    <input type="checkbox" id="menu_show">
     <header class="index_header">
+      <!-- для вызова всплывающего меню, эксперимент -->
+      <input type="checkbox" id="menu_show">
         <div class="logo">
             <a>Device</a>
         </div>
-        <!-- переверстка header -->
         <div class="header_mode">
-            <form action="#" method="get" class="search_form">
+            <form action="#" method="get">
                 <input type="search" name="search" class="search" placeholder="Поиск по сайту">
                 <a href="#" class="btn_search">Найти</a>
             </form>
@@ -45,33 +44,33 @@
                 <a href="#contacts">Контакты</a>
             </div>
         </div>
+        <nav class="catalog_menu">
+            <ul class="catalog_list">
+                <li>
+                    <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                    <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li>
+                    <a href="#">Экшн-камеры</a>
+                </li>
+            </ul>
+            <ul class="catalog_list">
+                <li>
+                    <a href="#">Фитнесс-браслеты</a>
+                </li>
+                <li>
+                    <a href="#">Умные часы</a>
+                </li>
+            </ul>
+            <ul class="catalog_list">
+                <li>
+                    <a href="#">Квадрокоптеры</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <nav class="catalog_menu">
-        <ul class="catalog_list">
-            <li>
-                <a href="#">Виртуальная реальность</a>
-            </li>
-            <li>
-                <a href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li>
-                <a href="#">Экшн-камеры</a>
-            </li>
-        </ul>
-        <ul class="catalog_list">
-            <li>
-                <a href="#">Фитнесс-браслеты</a>
-            </li>
-            <li>
-                <a href="#">Умные часы</a>
-            </li>
-        </ul>
-        <ul class="catalog_list">
-            <li>
-                <a href="#">Квадрокоптеры</a>
-            </li>
-        </ul>
-    </nav>
     <section class="promo_slider">
         <input type="radio" name="promo_selector" id="pr_1" checked>
         <input type="radio" name="promo_selector" id="pr_2">
