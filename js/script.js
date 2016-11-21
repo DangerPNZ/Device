@@ -24,6 +24,7 @@ feedback_btn.addEventListener("click", function(event){
   feedback_form.addEventListener("submit", function(event) {
     if (!input_name.value || !input_mail.value || !message.value){
       event.preventDefault();
+      alert("Для отправки сообщения, пожалуйста, заполните все поля.");
     }
     if (!input_name.value) {
        input_name.classList.add("send_error");
@@ -33,6 +34,15 @@ feedback_btn.addEventListener("click", function(event){
     }
     if (!message.value) {
        message.classList.add("send_error");
+    }
+    if (input_name.value) {
+       input_name.classList.remove("send_error");
+    }
+    if (input_mail.value) {
+       input_mail.classList.remove("send_error");
+    }
+    if (message.value) {
+       message.classList.remove("send_error");
     }
   });
 });

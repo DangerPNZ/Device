@@ -42,6 +42,10 @@ ul {
 li {
     list-style: none;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .container {
   min-width: 1240px;
   width: 100%;
@@ -86,12 +90,24 @@ header {
 .logo a:active {
   color: #666666;
 }
-.shop_navigation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: relative;
-    width: 520px;
+.header_mode {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  width: 1040px;
+}
+.header_mode::before {
+content: "";
+display: flex;
+position: absolute;
+top: 3px;
+left: 3px;
+width: 16px;
+height: 16px;
+background-position: -4607px -10px;
+background-image: url("../img/sprite.png");
+background-color: transparent;
 }
 .search {
   width: 350px;
@@ -101,18 +117,6 @@ header {
   border: none;
   outline: none;
   color: #ac9e69;
-  background-color: transparent;
-}
-.shop_navigation::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 16px;
-  height: 16px;
-  background-position: -4607px -10px;
-  background-image: url("../img/sprite.png");
   background-color: transparent;
 }
 .search:hover {
@@ -128,7 +132,7 @@ header {
   display: none;
   position: absolute;
   top: -12px;
-  right: 75px;
+  left: 357px;
   background-color: inherit;
   border: 2px solid #000;
   padding: 12px 20px;
@@ -154,9 +158,17 @@ header {
 .search:focus .btn_search {
   display: flex;
 }
+.general_navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1040px;
+  padding-top: 43px;
+}
 .catalog_open {
   display: flex;
-  padding-top: 43px;
+  flex-wrap: wrap;
+  width: 520px;
 }
 .catalog_link {
   font-size: 18px;
@@ -201,13 +213,6 @@ label[for="menu_show"]:active::before {
 }
 label[for="menu_show"]:active::after {
   background-color: #e2cf8a;
-}
-.buyer_menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 520px;
-    padding-left: 20px;
 }
 .personal_mode {
     display: flex;
@@ -311,7 +316,7 @@ label[for="menu_show"]:active::after {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 45px;
+    width: 500px;
 }
 .about_us a {
   font-size: 18px;
@@ -372,12 +377,22 @@ nav {
   margin: 0 auto;
   z-index: 1000;
 }
+.promo_slider::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 90px;
+  width: 100px;
+  height: 7px;
+  background-color: #fff;
+}
 .promo_slider input[name="promo_selector"] {
   display: none;
 }
 .promo_toogle {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   position: absolute;
   bottom: 137px;
   right: 0;
@@ -408,15 +423,6 @@ nav {
   display: none;
   flex-direction: column;
   width: 560px;
-}
-.pr_slide::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  top: 90px;
-  width: 100px;
-  height: 7px;
-  background-color: #fff;
 }
 .slide_number {
   position: absolute;
@@ -534,6 +540,7 @@ nav {
 .nav_bar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 1160px;
   margin: 115px auto;
 }
@@ -684,14 +691,17 @@ input[name="adv_radio"] {
   width: 400px;
 }
 .advantages_list {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 280px;
+  margin-top: 10px;
 }
 .advantages_list::before {
   content: "";
   display: flex;
   position: absolute;
-  top: -57px;
+  top: -68px;
   right: -5px;
   width: 7px;
   height: 319px;
@@ -699,8 +709,9 @@ input[name="adv_radio"] {
 }
 .advantages_list li {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 24px 0;
+  margin: 12px 0;
   min-height: 40px;
 }
 #advantages_delivery:checked ~ .adv_toogle_menu .advantages_list li:nth-child(1),
@@ -711,6 +722,7 @@ input[name="adv_radio"] {
 .advantages_list a {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   position: relative;
   width: 160px;
   font-size: 18px;
@@ -810,7 +822,7 @@ input[name="adv_radio"] {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1160px;
-  margin: 90px auto 91px auto;
+  margin: 105px auto 90px auto;
 }
 .manufacturers a {
   display: flex;
@@ -928,7 +940,7 @@ input[name="adv_radio"] {
   justify-content: center;
   position: relative;
   width: 260px;
-  margin-top: 67px;
+  margin-top: 66px;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -959,7 +971,9 @@ input[name="adv_radio"] {
   width: 560px;
 }
 .map {
-  margin: 23px 0 8px 0;
+  margin: 23px 0 13px 0;
+  width: 560px;
+  height: 222px;
 }
 .description::before,
 .contacts::before {
@@ -993,7 +1007,7 @@ input[name="adv_radio"] {
 }
 .feedback_open {
   display: flex;
-  animation: decompression 0.4s;
+  animation: decompression 0.3s;
 }
 .close_btn {
   position: absolute;
@@ -1173,10 +1187,12 @@ footer {
 .footer_personal_mode {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .f_personal_link {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 5px;
   width: 330px;
@@ -1251,11 +1267,13 @@ footer {
 }
 .footer_info {
   display: flex;
+  flex-wrap: wrap;
   margin: 17px 0 0 0;
 }
 .adds,
 .tel {
   display: flex;
+  flex-wrap: wrap;
   width: 360px;
 }
 .tel {
@@ -1269,6 +1287,7 @@ footer {
 .f_about_shop {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
   width: 440px;
 }
@@ -1287,11 +1306,13 @@ footer {
 .external_links {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 380px;
 }
 .social {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 30px 0 0 -10px;
   padding: 20px;
   width: 400px;
@@ -1489,6 +1510,7 @@ aside {
 .filter_title {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   width: 100%;
   padding: 25px 0 26px 0;
   background-color: #dbdbdb;
@@ -1674,13 +1696,12 @@ aside {
 .filter_selection input[type="radio"]:disabled + label::before {
   border-color: #e6e6e6;
 }
-/* redio checked */
 .filter_selection input[type="radio"]:checked + label::after{
   content: "";
   display: flex;
   position: absolute;
   top: 50%;
-  margin-top: -5px;
+  margin-top: -5.5px;
   left: 5.5px;
   width: 6px;
   height: 6px;
@@ -1727,6 +1748,7 @@ aside {
 }
 .sort_header {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   padding-left: 72px;
   background-color: #ebebeb;
@@ -1734,10 +1756,12 @@ aside {
 .sort_header_container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 760px;
 }
 .sort_mode {
   display: flex;
+  flex-wrap: wrap;
 }
 .sort_mode h2 {
   font-size: 16px;
@@ -1747,6 +1771,7 @@ aside {
 }
 .criteria {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .criteria li {
@@ -1828,6 +1853,10 @@ aside {
   position: relative;
   width: 360px;
   margin-bottom: 49px;
+}
+.product img {
+  width: 360px;
+  height: 380px;
 }
 .purchase_mode {
   display: none;
@@ -1925,6 +1954,7 @@ aside {
 .pages {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 760px;
   background-color: #ebebeb;
   margin: -11px 0 74px 0;
@@ -1943,6 +1973,7 @@ aside {
 .page_list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 440px;
 }
 .page_list li {
