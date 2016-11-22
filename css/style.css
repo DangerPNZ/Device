@@ -109,7 +109,8 @@ background-image: url("../img/sprite.png");
 background-color: transparent;
 }
 .header_mode form {
-  padding: 0;
+  display: flex;
+  justify-content: flex-start;
   width: 350px;
 }
 .search {
@@ -118,8 +119,6 @@ background-color: transparent;
   padding-left: 39px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 36px;
-  height: 36px;
   border: none;
   outline: none;
   color: #ac9e69;
