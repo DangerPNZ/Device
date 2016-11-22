@@ -109,6 +109,8 @@ background-image: url("../img/sprite.png");
 background-color: transparent;
 }
 .header_mode form {
+  padding: 0;
+  display: flex;
   width: 350px;
 }
 .search {
@@ -325,8 +327,13 @@ label[for="menu_show"]:active::after {
 .about_us a:last-child {
   margin-right: -0.2em;
 }
+.adv_links {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 280px;
+}
 .adv_links a {
-  margin-right: 31px;
+  margin-right: 34px;
 }
 /* всплывающее навигационное меню */
 #menu_show {
