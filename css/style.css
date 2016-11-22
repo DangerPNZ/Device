@@ -110,12 +110,12 @@ background-color: transparent;
 }
 .header_mode form {
   padding: 0;
-  display: flex;
   width: 350px;
 }
 .search {
-  width: 310px;
-  margin-left: 39px;
+  width: 350px;
+  margin: 0;
+  padding-left: 39px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 15px;
   border: none;
