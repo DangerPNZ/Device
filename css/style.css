@@ -93,10 +93,15 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
   width: 1040px;
 }
-.header_mode::before {
+.header_mode form {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 350px;
+}
+.header_mode form::before {
 content: "";
 display: flex;
 position: absolute;
@@ -107,11 +112,6 @@ height: 16px;
 background-position: -4607px -10px;
 background-image: url("../img/sprite.png");
 background-color: transparent;
-}
-.header_mode form {
-  display: flex;
-  justify-content: flex-start;
-  width: 350px;
 }
 .search {
   width: 350px;
