@@ -79,3 +79,13 @@ input_search.addEventListener("input", function(){
     btn_search.classList.remove("btn_show");
   }
 });
+
+var catalog_link = document.querySelector(".catalog_link");
+var catalog_menu = document.querySelector(".catalog_menu");
+catalog_link.addEventListener("mouseover", function(){
+  catalog_menu.classList.add("menu_demo");
+});
+catalog_link.addEventListener("mouseout", function(){
+  catalog_menu.classList.contains("menu_demo");
+  catalog_menu.classList.remove("menu_demo");
+});
